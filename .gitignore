@@ -1,0 +1,11 @@
+# Memory files (may contain sensitive info)
+memory/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
