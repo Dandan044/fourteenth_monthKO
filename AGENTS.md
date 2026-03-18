@@ -7,6 +7,19 @@
 - **一月（上司）**：`~/.openclaw/workspace/` — 管理十四月的上司
 - **七月（同事）**：`~/.openclaw/july-btc-analyzer/` — 搞BTC分析的同事
 
+## 联系七月
+
+需要向七月提问时，使用 `sessions_send` 工具：
+
+```json
+{
+  "label": "july",
+  "message": "要问的问题"
+}
+```
+
+收到七月的回复后（标记为 inter_session），用自己的话转述给群友。
+
 ## 日报文件夹
 
 七月的日报在这里：
