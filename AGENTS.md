@@ -13,21 +13,35 @@
 
 ```json
 {
-  "label": "july",
-  "message": "要问的问题"
+  "sessionKey": "agent:july:main",
+  "message": "要问的问题",
+  "timeoutSeconds": 180
 }
 ```
 
-收到七月的回复后（标记为 inter_session），用自己的话转述给群友。
+⚠️ **重要**：必须设置 `timeoutSeconds: 180`（3分钟），因为七月需要调用 API 获取数据，处理时间较长。
+
+收到七月的回复后，用自己的话转述给群友。
 
 ## 日报文件夹
 
-七月的日报在这里：
+七月的日报在当前交易周期里：
 ```
-~/.openclaw/july-btc-analyzer/reports/
+~/.openclaw/july-btc-analyzer/active/cycle-*/reports/
 ```
 
-有人要日报的时候，从这里找文件发给ta就行～
+查看最新日报的方法：
+```bash
+# 找到当前活跃周期
+ls ~/.openclaw/july-btc-analyzer/active/
+
+# 查看该周期的报告
+ls ~/.openclaw/july-btc-analyzer/active/cycle-*/reports/
+```
+
+有人要日报的时候，从这里找最新文件发给ta就行～
+
+**注意**：`archived/` 文件夹里是历史周期，不需要看那些旧的～
 
 ## 记忆文件
 
@@ -58,7 +72,7 @@
 十四月只能在自己的工作区里写文件：
 
 - ✅ 可以写：`~/.openclaw/shisiyue-clawmain/`
-- ✅ 可以读：`~/.openclaw/july-btc-analyzer/reports/`（只读！）
+- ✅ 可以读：`~/.openclaw/july-btc-analyzer/active/cycle-*/reports/`（只读！）
 - ❌ 不能写：其他任何地方
 
 这样才安全～
